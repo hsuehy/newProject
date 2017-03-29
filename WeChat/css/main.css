@@ -1,0 +1,218 @@
+/*主页面*/
+#container {
+  width: 100%;
+  font-size: 14px;
+  position: relative;
+}
+#wrapper li center span {
+  display: inline-block;
+  background: #ccc;
+  border-radius: 0.22222222rem;
+  padding: 0.26666667rem 0.35555556rem;
+  line-height: 0.8rem;
+  color: #fff;
+}
+#wrapper li {
+  padding: 0.26666667rem 0.66666667rem;
+  position: relative;
+}
+/* 左聊天 */
+.leftWrapper {
+  float: left;
+  top: 0px;
+}
+.leftUser {
+  width: 1.77777778rem;
+  height: 1.77777778rem;
+  float: left;
+  background-image: url(../img/2.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.leftUser:after {
+  content: attr(data-content);
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  font-size: 12px;
+  color: #666;
+  line-height: 0.26666667rem;
+  white-space: nowrap;
+}
+.leftMes {
+  position: relative;
+  float: left;
+  max-width: 64%;
+  font-size: 16px;
+  line-height: 1.11111111rem;
+  color: #000;
+  background: #fff;
+  border: solid #bbb 1px;
+  border-radius: 0.22222222rem;
+  padding: 0.31111111rem 0.31111111rem;
+  margin: 0.62222222rem 0 0 0.6rem;
+}
+.leftMes:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  width: 0.51111111rem;
+  height: 0.51111111rem;
+  background: #fff;
+  border-top: solid #bbb 1px;
+  border-left: solid #bbb 1px;
+  -webkit-transform: rotate(-45deg);
+  margin: 0.55555556rem 0 0 -0.3rem;
+}
+/* 右聊天*/
+.rightWrapper {
+  float: right;
+  top: 0rem;
+}
+.rightUser {
+  width: 1.86666667rem;
+  height: 1.86666667rem;
+  float: right;
+  background-image: url(../img/1.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.rightUser:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0%;
+  font-size: 12px;
+  color: #666;
+  line-height: 0.26666667rem;
+  white-space: nowrap;
+}
+.rightMes {
+  position: relative;
+  float: right;
+  max-width: 64%;
+  font-size: 16px;
+  line-height: 1.11111111rem;
+  color: #000;
+  background: #a0e75a;
+  border: solid #bbb 1px;
+  border-radius: 0.22222222rem;
+  padding: 0.31111111rem 0.31111111rem;
+  margin: 0 0.6rem 0 0;
+}
+.rightGif {
+  position: relative;
+  float: right;
+  max-width: 64%;
+  padding: 0.31111111rem 0.31111111rem;
+}
+.rightGif img {
+  width: 5rem;
+  height: 5rem;
+}
+.rightLink {
+  float: right;
+}
+.rightLink img {
+  width: 10.88888889rem;
+  height: 4.48888889rem;
+  padding-right: 4px;
+}
+.rightWrapper .rightLink s {
+  z-index: 300;
+  -webkit-animation: ani-hand 1.5s 1.2s infinite both;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18%;
+  padding-bottom: 18%;
+  background-image: url(../img/point.png);
+  margin: 9% 0 0 56%;
+  background-size: 2.48888889rem 2.6rem;
+}
+@-webkit-keyframes ani-hand {
+  0% {
+    -webkit-transform: translateY(100%) scale(1);
+    opacity: 0;
+  }
+  30%,
+  40% {
+    -webkit-transform: translateY(0%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(0%) scale(0.92);
+    opacity: 1;
+  }
+  60%,
+  70% {
+    -webkit-transform: translateY(0%) scale(1);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -webkit-transform: translateY(0%) scale(1);
+    opacity: 0;
+  }
+}
+.rightMes:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: 0;
+  font-size: 14px;
+  width: 0.51111111rem;
+  height: 0.51111111rem;
+  border-top: solid #bbb 1px;
+  border-left: solid #bbb 1px;
+  -webkit-transform: rotate(135deg);
+  background: #a0e75a;
+  margin: 0.77777778rem -0.3rem 0 0;
+}
+#wrapper ul {
+  overflow: hidden;
+  padding-bottom: 2.22222222rem;
+}
+/* 底部输入框 */
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  background-size: cover;
+  background-image: url(../img/input.png);
+  z-index: 200;
+}
+.clickAll {
+  position: fixed;
+  right: 0;
+  bottom: 2.22222222rem;
+  width: 30%;
+  height: 1.55555556rem;
+  line-height: 1.55555556rem;
+  font-size: 14px;
+  color: #18aa48;
+  text-align: center;
+  z-index: 200;
+  cursor: pointer;
+  background-color: #f7f9f6;
+  border-top-left-radius: 1.11111111rem;
+  border-bottom-left-radius: 1.11111111rem;
+}
+.clickAll b {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: url(../img/clickAll.png) no-repeat;
+  background-size: contain;
+  position: fixed;
+  bottom: 2.822222rem;
+  right: 0.5rem;
+  margin-left: 1.1rem;
+  z-index: 100;
+}
